@@ -1,19 +1,6 @@
 import requests
 import streamlit as st
-from streamlit_lottie import  st_lottie
 st.set_page_config(page_title="Blood Donation",page_icon=":drop_of_blood:",layout="wide")
-def  mode_lottieurl(url):
-     r=requests.get(url)
-     if r.status_code !=200:
-          return None
-     return r.json()
-lottie_blood= mode_lottieurl("https://lottie.host/88288bb0-38fa-4f34-a749-9abf68153c61/bfDpv2uKh5.json")
-def  load_lottieurl(url):
-     r=requests.get(url)
-     if r.status_code !=200:
-          return None
-     return r.json()
-lottie_coding= load_lottieurl("https://lottie.host/1f0c71b7-9e3a-4f99-86c8-47e985fb5d47/J0U9EKvruG.json")
 with st.container():
      st.title("BLOOD DONATION")
      st.write("---")
@@ -31,8 +18,6 @@ with st.container():
           st.subheader("Go throught the link below to fill the form.")
           st.write("""while donating blood make sure that you are 18+ and bring your health checkup reports for safty. while donating if the offer anything you can take but don't DEMAND any amount""")
           st.write("[Donate>](https://forms.gle/fM1fvzfLQEyChgZn7) :smile:")
-     with right_column:
-          st_lottie(lottie_coding, height= 300,key="coding")
 with st.container():
     left_column , right_cloymn =st.columns(2)
     with right_column:
@@ -41,8 +26,6 @@ with st.container():
          st.write("Don't expect anything from them, just donate to save someones life,'Don't ask money'..")
          st.write("[Donor list>](https://docs.google.com/spreadsheets/d/1m5i0bnFwfOM1TylmcODZs-PgzhmWjc4ufZre7U2OCsE/edit?resourcekey=&gid=1286749782#gid=1286749782):eyes:")
          st.write("""My website is a comprehensive online platform designed to streamline the blood donation process and connect those in need with willing donors. It offers a user-friendly interface for individuals to register as donors, search for blood requests, and organize blood drives. The platform utilizes advanced matching algorithms to efficiently pair donors with recipients based on blood type and location. Additionally, it provides valuable information about blood donation, eligibility criteria, and the importance of regular blood donations. By leveraging technology and community engagement, this website aims to address the critical need for blood and save lives.""")
-    with left_column:
-        st_lottie(lottie_blood, height= 300,key="blood")
 with st.container():
           st.subheader("Not only blood can donate other ORGANS")
           st.write("""In this web site we are providing a easiest way to help people. We are giving a diresct access to donar to reciver. """)
